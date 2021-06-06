@@ -6,12 +6,30 @@ public class VehicleMovement : MonoBehaviour
 {
     
 
-    public float xSpeed = 10f;
-    public float Power = 1f;
+    private float xSpeed = 10f;
+    private float Power = 1.5f;
     private float Friction = 0.1f;
     private bool Right = false;
     private bool left = false;
 
+
+    public GameObject deathbox;
+    public GameObject player ;
+    private Vector3 startPosition;
+    private Vector3 direction;
+
+    private void Start()
+    {
+        
+        startPosition = player.transform.position;
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.tag == "deathbox")
+        {
+            player.transform.position = startPosition;
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -50,7 +68,10 @@ public class VehicleMovement : MonoBehaviour
         {
             transform.Rotate(0, -1.5f, 0);
         }
-
+        if (Input.GetKey(KeyCode.R))
+        {
+            player.transform.position = startPosition;
+        }
         xSpeed *= Friction;
         transform.Translate(Vector3.right * -xSpeed);
     }
