@@ -15,7 +15,7 @@ public class Checkpoints : MonoBehaviour
         {
             Debug.Log("checkpointpassed");
 
-            levelCheckpoints.PlayerPassedCheckpoint(this);
+            levelCheckpoints.CarPassedCheckpoint(this, other.transform);
         }
     }
 
