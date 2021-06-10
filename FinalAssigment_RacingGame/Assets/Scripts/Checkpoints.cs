@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Checkpoints : MonoBehaviour
 {
     private LevelCheckpoints levelCheckpoints;
 
+    
 
     private void OnTriggerEnter(Collider other)
     {
-
+        
         //Checking if the player passed the checkpoint
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("checkpointpassed");
+            
 
+            Debug.Log("checkpointpassed");
+            
             levelCheckpoints.CarPassedCheckpoint(this, other.transform);
         }
     }

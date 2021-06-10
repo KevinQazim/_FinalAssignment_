@@ -7,7 +7,14 @@ public class UIscript : MonoBehaviour
 {
     public Text timerText;
     public Text timerTextPlayer2;
+    public Text laptext;
+    public Text laptext2;
+    public Text positions1;
+    public Text positions2;
     private float startTimer;
+
+    private bool playerhitcheckpoint1;
+    
     void Start()
     {
         startTimer = Time.time;
@@ -25,4 +32,5 @@ public class UIscript : MonoBehaviour
         timerTextPlayer2.text = minutes + ":" + seconds;
         
     }
+    
 }
