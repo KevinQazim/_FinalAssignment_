@@ -9,11 +9,16 @@ public class LevelCheckpoints : MonoBehaviour
     private List<int> nextCheckpointIndexList;
     [SerializeField] private List<Transform> carTransformList;
 
+    public VechicleMovementPlayer2 player2Start;
+    
+
 
 
     private void Awake()
     {
         Transform checkpointsTransform = transform.Find("Checkpoints");
+
+        
 
         checkpointsList = new List<Checkpoints>();
 
@@ -39,6 +44,11 @@ public class LevelCheckpoints : MonoBehaviour
     {
         Debug.Log(checkpoints.transform.name);
         Debug.Log(checkpointsList.IndexOf(checkpoints));
+
+        //setting start position
+        //player2Start.GetComponent<VechicleMovementPlayer2>().startPosition = checkpoints.transform.position;
+
+       
 
         int nextCheckpointIndex = nextCheckpointIndexList[carTransformList.IndexOf(carTransform)];
 
