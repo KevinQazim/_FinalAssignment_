@@ -9,7 +9,7 @@ public class VechicleMovementPlayer2 : MonoBehaviour
     private Vector3 startPosition;
     private Vector3 direction;
     private float xSpeed = 10f;
-    private float Power = 1f;
+    private float Power = 1.5f;
     private float Friction = 0.1f;
     private bool Right = false;
     private bool left = false;
