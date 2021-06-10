@@ -22,6 +22,11 @@ public class PositionsManager : MonoBehaviour
     public int lap1Number;
 
     public UIscript ui;
+
+    public void Start()
+    {
+        playerpass10 = false;
+    }
     public void OnTriggerEnter(Collider other)
     {
         if(playerpass == false)
@@ -43,7 +48,7 @@ public class PositionsManager : MonoBehaviour
             
         }
 
-        if (playerpass2 == false)
+         else if (playerpass2 == false)
         {
             if (other.tag == "player1")
             {
@@ -61,7 +66,7 @@ public class PositionsManager : MonoBehaviour
             }
             
         }
-        if (playerpass3 == false)
+         else if (playerpass3 == false)
         {
             if (other.tag == "player1")
             {
@@ -79,7 +84,7 @@ public class PositionsManager : MonoBehaviour
             }
             
         }
-        if (playerpass4 == false)
+         else if (playerpass4 == false)
         {
             if (other.tag == "player1")
             {
@@ -97,7 +102,7 @@ public class PositionsManager : MonoBehaviour
             }
            
         }
-        if (playerpass5 == false)
+        else  if (playerpass5 == false)
         {
             if (other.tag == "player1")
             {
@@ -115,7 +120,7 @@ public class PositionsManager : MonoBehaviour
             }
           
         }
-        if (playerpass6 == false)
+         else  if (playerpass6 == false)
         {
             if (other.tag == "player1")
             {
@@ -133,7 +138,7 @@ public class PositionsManager : MonoBehaviour
             }
            
         }
-        if (playerpass7 == false)
+         else  if (playerpass7 == false)
         {
             if (other.tag == "player1")
             {
@@ -151,7 +156,7 @@ public class PositionsManager : MonoBehaviour
             }
            
         }
-        if (playerpass8 == false)
+         else  if (playerpass8 == false)
         {
             if (other.tag == "player1")
             {
@@ -169,7 +174,7 @@ public class PositionsManager : MonoBehaviour
             }
             
         }
-        if (playerpass9 == false)
+          else if (playerpass9 == false)
         {
             if (other.tag == "player1")
             {
@@ -187,7 +192,7 @@ public class PositionsManager : MonoBehaviour
             }
             
         }
-        if (playerpass10 == false)
+          else if (playerpass10 == false)
         {
             if (other.tag == "player1")
             {
@@ -201,7 +206,7 @@ public class PositionsManager : MonoBehaviour
             }
             
             
-        }
+            }
     }
     private void Update()
     {
