@@ -236,6 +236,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 0}
 --- !u!1 &87364181
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +333,7 @@ RectTransform:
   - {fileID: 1494644546}
   - {fileID: 1053782687}
   - {fileID: 1849846276}
+  - {fileID: 1034719529}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1814,6 +1818,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 0}
 --- !u!1 &295706254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,10 +1852,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 614813161}
   timerTextPlayer2: {fileID: 1053782688}
-  laptext: {fileID: 0}
-  laptext2: {fileID: 0}
-  positions1: {fileID: 0}
-  positions2: {fileID: 0}
+  lapNumber: {fileID: 754238792}
+  lapNumber2: {fileID: 1034719531}
+  lap: {fileID: 1740713063}
+  lap2: {fileID: 1849846277}
+  startTimer: 0
+  lapTimer: 0
+  lapTimer2: 0
 --- !u!4 &295706256
 Transform:
   m_ObjectHideFlags: 0
@@ -2568,6 +2578,7 @@ RectTransform:
   - {fileID: 6932307}
   - {fileID: 614813160}
   - {fileID: 1740713062}
+  - {fileID: 754238790}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2671,6 +2682,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 0}
 --- !u!43 &334345103
 Mesh:
   m_ObjectHideFlags: 0
@@ -3145,6 +3159,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 0}
 --- !u!43 &387923878
 Mesh:
   m_ObjectHideFlags: 0
@@ -4999,6 +5016,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 295706255}
 --- !u!43 &536426279
 Mesh:
   m_ObjectHideFlags: 0
@@ -5362,6 +5382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathbox: {fileID: 0}
   player: {fileID: 0}
+  spawnPosition2: {x: 0, y: 0, z: 0}
 --- !u!54 &566855306
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6768,6 +6789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathbox: {fileID: 0}
   player: {fileID: 671926874}
+  spawnPosition2: {x: 0, y: 0, z: 0}
 --- !u!54 &671926876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6797,6 +6819,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6737895, y: 0.8119253, z: 1.4892727}
   m_Center: {x: -0.011529028, y: -0.031054491, z: 0.051313337}
+--- !u!4 &671926878 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400012, guid: 8c20871c55b9e6a44b5385a2dd8b4ffc, type: 3}
+  m_PrefabInstance: {fileID: 1403394860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &673664165
 Mesh:
   m_ObjectHideFlags: 0
@@ -7721,6 +7748,87 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &754238789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 754238790}
+  - component: {fileID: 754238791}
+  - component: {fileID: 754238792}
+  m_Layer: 5
+  m_Name: Lap (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &754238790
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754238789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 326891611}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 210.8, y: 126}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &754238791
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754238789}
+  m_CullTransparentMesh: 1
+--- !u!114 &754238792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754238789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.70090264, b: 0.06132078, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 26
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'lap
+
+'
 --- !u!1 &794566688
 GameObject:
   m_ObjectHideFlags: 0
@@ -11178,6 +11286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathbox: {fileID: 0}
   player: {fileID: 0}
+  spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!54 &926808407
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12095,6 +12204,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b7e7952ed6b27d4ba26be22df56eeca, type: 3}
+--- !u!1 &1034719528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1034719529}
+  - component: {fileID: 1034719530}
+  - component: {fileID: 1034719531}
+  m_Layer: 5
+  m_Name: Lap2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1034719529
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034719528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 87364185}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -208.3, y: 132}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1034719530
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034719528}
+  m_CullTransparentMesh: 1
+--- !u!114 &1034719531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034719528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.68167484, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'lap
+
+'
 --- !u!1 &1040513938
 GameObject:
   m_ObjectHideFlags: 0
@@ -12471,7 +12661,7 @@ GameObject:
   - component: {fileID: 1053782689}
   - component: {fileID: 1053782688}
   m_Layer: 5
-  m_Name: Time
+  m_Name: Time2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16421,6 +16611,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 0}
 --- !u!43 &1385827597
 Mesh:
   m_ObjectHideFlags: 0
@@ -16856,6 +17049,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 0}
 --- !u!1001 &1420757960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18756,6 +18952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathbox: {fileID: 0}
   player: {fileID: 1584964821}
+  spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!65 &1584964823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19152,6 +19349,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 0}
 --- !u!1 &1598628823
 GameObject:
   m_ObjectHideFlags: 0
@@ -21813,6 +22013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1662683231}
+  - component: {fileID: 1662683232}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -21871,6 +22072,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1662683232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662683230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dca4ac69ed53754cbd4938ec9edc3ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carTransformList:
+  - {fileID: 671926878}
+  - {fileID: 1584964825}
+  player2Start: {fileID: 0}
+  playerstart: {fileID: 0}
 --- !u!43 &1669049276
 Mesh:
   m_ObjectHideFlags: 0
@@ -23600,6 +23818,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 0}
 --- !u!1 &1823032364
 GameObject:
   m_ObjectHideFlags: 0
@@ -23987,7 +24208,7 @@ GameObject:
   - component: {fileID: 1849846278}
   - component: {fileID: 1849846277}
   m_Layer: 5
-  m_Name: Lap
+  m_Name: Lap2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25638,6 +25859,9 @@ MonoBehaviour:
   playerpass8: 0
   playerpass9: 0
   playerpass10: 0
+  lap2Number: 0
+  lap1Number: 0
+  ui: {fileID: 0}
 --- !u!1 &2043064154
 GameObject:
   m_ObjectHideFlags: 0
