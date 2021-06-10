@@ -10,6 +10,7 @@ public class LevelCheckpoints : MonoBehaviour
     [SerializeField] private List<Transform> carTransformList;
 
     public VechicleMovementPlayer2 player2Start;
+    public VehicleMovement playerstart;
     
 
 
@@ -46,7 +47,9 @@ public class LevelCheckpoints : MonoBehaviour
         Debug.Log(checkpointsList.IndexOf(checkpoints));
 
         //setting start position
-        //player2Start.GetComponent<VechicleMovementPlayer2>().startPosition = checkpoints.transform.position;
+        player2Start.GetComponent<VechicleMovementPlayer2>().spawnPosition2 = checkpoints.transform.position;
+
+        playerstart.GetComponent<VehicleMovement>().spawnPosition = checkpoints.transform.position;
 
        
 

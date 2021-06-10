@@ -6,7 +6,7 @@ public class VechicleMovementPlayer2 : MonoBehaviour
 {
     public GameObject deathbox;
     public GameObject player;
-    private Vector3 startPosition;
+    public Vector3 spawnPosition2;
     private Vector3 direction;
     private float xSpeed = 10f;
     private float Power = 1.5f;
@@ -18,13 +18,13 @@ public class VechicleMovementPlayer2 : MonoBehaviour
     private void Start()
     {
 
-        startPosition = player.transform.position;
+        spawnPosition2 = player.transform.position;
     }
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "deathbox")
         {
-            player.transform.position = startPosition;
+            player.transform.position = spawnPosition2;
         }
     }
     private void FixedUpdate()
@@ -66,7 +66,7 @@ public class VechicleMovementPlayer2 : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.P))
         {
-            player.transform.position = startPosition;
+            player.transform.position = spawnPosition2;
         }
 
         xSpeed *= Friction;

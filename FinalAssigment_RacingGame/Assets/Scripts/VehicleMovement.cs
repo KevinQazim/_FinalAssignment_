@@ -15,19 +15,19 @@ public class VehicleMovement : MonoBehaviour
 
     public GameObject deathbox;
     public GameObject player ;
-    private Vector3 startPosition;
+    public Vector3 spawnPosition;
     private Vector3 direction;
 
     private void Start()
     {
         
-        startPosition = player.transform.position;
+        spawnPosition = player.transform.position;
     }
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "deathbox")
         {
-            player.transform.position = startPosition;
+            player.transform.position = spawnPosition;
         }
     }
 
@@ -70,7 +70,7 @@ public class VehicleMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.R))
         {
-            player.transform.position = startPosition;
+            player.transform.position = spawnPosition;
         }
         xSpeed *= Friction;
         transform.Translate(Vector3.right * -xSpeed);
