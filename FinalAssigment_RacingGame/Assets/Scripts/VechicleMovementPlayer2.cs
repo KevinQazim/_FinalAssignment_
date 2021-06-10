@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class VechicleMovementPlayer2 : MonoBehaviour
 {
-
+    public GameObject deathbox;
+    public GameObject player;
+    private Vector3 startPosition;
+    private Vector3 direction;
     private float xSpeed = 10f;
     private float Power = 1f;
     private float Friction = 0.1f;
@@ -12,6 +15,18 @@ public class VechicleMovementPlayer2 : MonoBehaviour
     private bool left = false;
 
 
+    private void Start()
+    {
+
+        startPosition = player.transform.position;
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.tag == "deathbox")
+        {
+            player.transform.position = startPosition;
+        }
+    }
     private void FixedUpdate()
     {
         if (Right)
@@ -48,6 +63,10 @@ public class VechicleMovementPlayer2 : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Rotate(0, -1, 0);
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            player.transform.position = startPosition;
         }
 
         xSpeed *= Friction;
