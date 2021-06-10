@@ -8884,8 +8884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7e7d8c77d399f43b6069fc86838041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathbox: {fileID: 1947661424}
-  player: {fileID: 976237715}
 --- !u!54 &976237717
 Rigidbody:
   m_ObjectHideFlags: 0
