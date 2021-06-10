@@ -17,8 +17,11 @@ public class PositionsManager : MonoBehaviour
     public bool playerpass8;
     public bool playerpass9;
     public bool playerpass10;
-    
 
+    public int lap2Number;
+    public int lap1Number;
+
+    public UIscript ui;
     public void OnTriggerEnter(Collider other)
     {
         if(playerpass == false)
@@ -188,24 +191,33 @@ public class PositionsManager : MonoBehaviour
         {
             if (other.tag == "player1")
             {
-                playerpass10 = true;
-                positions.text = ("1/2");
-                positions2.text = ("2/2");
-                
-               
-                
+                ui.lapTimer2 = Time.time;
+                lap2Number++;
             }
             if (other.tag == "player2")
             {
-                playerpass10 = true;
-                positions.text = ("2/2");
-                positions2.text = ("1/2");
-                
-               
-                
+                ui.lapTimer = Time.time;
+                lap1Number++;
             }
             
             
         }
+    }
+    private void Update()
+    {
+        float t = Time.time - ui.lapTimer;
+        float tx = Time.time - ui.lapTimer2;
+        
+
+        string minutes = ((int)t / 60).ToString();
+        string lap2minutes = ((int)tx / 60).ToString();
+        string seconds = (t % 60).ToString("f2");
+        string lap2seconds = (tx % 60).ToString("f2");
+
+        ui.lapNumber.text = lap1Number.ToString();
+        ui.lapNumber2.text = lap2Number.ToString();
+
+        ui.lap.text = minutes + ":" + seconds;
+        ui.lap2.text = lap2minutes + ":" + lap2seconds;
     }
 }
