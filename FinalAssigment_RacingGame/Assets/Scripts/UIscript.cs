@@ -7,17 +7,25 @@ public class UIscript : MonoBehaviour
 {
     public Text timerText;
     public Text timerTextPlayer2;
-    public Text laptext;
-    public Text laptext2;
-    public Text positions1;
-    public Text positions2;
-    private float startTimer;
 
-    private bool playerhitcheckpoint1;
+    public Text lapNumber;
+    public Text lapNumber2;
+
+    public Text lap;
+    public Text lap2;
+
+   
+    public float startTimer;
+    public float lapTimer;
+    public float lapTimer2;
+
+   
     
     void Start()
     {
         startTimer = Time.time;
+        lapTimer = Time.time;
+        lapTimer2 = Time.time;
     }
 
     // Update is called once per frame
@@ -31,6 +39,7 @@ public class UIscript : MonoBehaviour
         timerText.text = minutes + ":" + seconds;
         timerTextPlayer2.text = minutes + ":" + seconds;
         
+
     }
     
 }
