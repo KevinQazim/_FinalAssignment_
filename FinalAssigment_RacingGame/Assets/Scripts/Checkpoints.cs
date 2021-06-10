@@ -21,6 +21,7 @@ public class Checkpoints : MonoBehaviour
 
     public void SetLevelCheckpoints(LevelCheckpoints levelCheckpoints)
     {
+        //setting up the order of the checkpoints
         this.levelCheckpoints = levelCheckpoints;
     }
 }
