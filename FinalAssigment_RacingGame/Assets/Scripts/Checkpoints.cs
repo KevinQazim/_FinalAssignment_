@@ -15,16 +15,16 @@ public class Checkpoints : MonoBehaviour
         //Checking if the player passed the checkpoint
         if (other.gameObject.tag == "player1")
         {
-            Debug.Log("checkpointpassed");
+            Debug.Log("checkpointpassedCar1");
             
-            levelCheckpoints.CarPassedCheckpoint(this, other.transform);
+            levelCheckpoints.Car1PassedCheckpoint(this, other.transform);
         }
 
         if (other.gameObject.tag == "player2")
         {
-            Debug.Log("checkpointpassed");
+            Debug.Log("checkpointpassedCar2");
 
-            levelCheckpoints.CarPassedCheckpoint(this, other.transform);
+            levelCheckpoints.Car2PassedCheckpoint(this, other.transform);
         }
     }
 
