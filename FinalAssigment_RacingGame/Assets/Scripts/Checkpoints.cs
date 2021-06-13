@@ -7,8 +7,6 @@ public class Checkpoints : MonoBehaviour
 {
     private LevelCheckpoints levelCheckpoints;
 
-    
-
     private void OnTriggerEnter(Collider other)
     {
         

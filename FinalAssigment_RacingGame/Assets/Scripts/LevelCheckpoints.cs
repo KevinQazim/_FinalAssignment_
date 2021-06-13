@@ -60,17 +60,11 @@ public class LevelCheckpoints : MonoBehaviour
             //showing the player if they are going the right way by checking if they hit the checkpoint in order
             nextCheckpointIndexList[carTransformList.IndexOf(carTransform)] = (nextCheckpointIndex + 1) % checkpointsList.Count;
 
-            Debug.Log("Right Way");
+          
         }
-        else
-        {
-            Debug.Log("Wrong Way");
-        }
+       
 
     }
-
-
-
 
     public void Car2PassedCheckpoint(Checkpoints checkpoints, Transform carTransform)
     {
@@ -91,7 +85,5 @@ public class LevelCheckpoints : MonoBehaviour
 
            
         }
-       
-
     }
 }

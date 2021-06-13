@@ -17,7 +17,6 @@ public class VechicleMovementPlayer2 : MonoBehaviour
 
     private void Start()
     {
-
         spawnPosition2 = player.transform.position;
     }
     private void OnTriggerEnter(Collider collision)
@@ -67,6 +66,9 @@ public class VechicleMovementPlayer2 : MonoBehaviour
         if (Input.GetKey(KeyCode.P))
         {
             player.transform.position = spawnPosition2;
+
+
+            player.transform.localRotation = Quaternion.Euler(0, -90, 0);
         }
 
         xSpeed *= Friction;
