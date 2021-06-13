@@ -5,23 +5,21 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public GameObject bullet;
-    private Rigidbody therigidbody;
-    public int speed = 5;
-    public int lifeTime = 120;
-    public int timeAlive = 0;
+    public GameObject bullet_emitter;
+    public float speed = 100f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            therigidbody.velocity = new Vector3(0, 0, speed);
+            GameObject temporaryBulletHandler;
+            temporaryBulletHandler = Instantiate(bullet,bullet_emitter.transform.position,bullet_emitter.transform.rotation) as GameObject;
+            temporaryBulletHandler.transform.Rotate(Vector3.left * 90);
+            Rigidbody temporaryRigidBody;
+            temporaryRigidBody = temporaryBulletHandler.GetComponent<Rigidbody>();
+            temporaryRigidBody.AddForce(transform.forward * speed);
+            Destroy(temporaryBulletHandler, 10.0f);
         }  
     }
 }
