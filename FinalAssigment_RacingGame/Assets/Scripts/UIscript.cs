@@ -16,16 +16,14 @@ public class UIscript : MonoBehaviour
 
    
     public float startTimer;
-    public float lapTimer;
-    public float lapTimer2;
+    
 
    
     
     void Start()
     {
         startTimer = Time.time;
-        lapTimer = Time.time;
-        lapTimer2 = Time.time;
+        
     }
 
     // Update is called once per frame

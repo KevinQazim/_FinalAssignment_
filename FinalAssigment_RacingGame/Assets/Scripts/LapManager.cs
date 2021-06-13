@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class LapManager : MonoBehaviour
 {
+    public UIscript ui;
+    List<long> lapTimes = new List<long>();
+
     public Text player1LapCounter;
     public Text player2LapCounter;
     private int player1Lap;
@@ -21,8 +24,18 @@ public class LapManager : MonoBehaviour
     public float lapTimer;
     public float lapTimer2;
 
+    public Text P1lap1;
+    public Text P1lap2;
+    public Text P1lap3;
+
+    public Text P2lap1;
+    public Text P2lap2;
+    public Text P2lap3;
 
 
+    public GameObject WinGamePanel;
+    public Text WinningPlayer;
+    public Text PlayerWinningTime;
     void Start()
     {
         
@@ -53,7 +66,7 @@ public class LapManager : MonoBehaviour
         Player1LapTimerText.text = Player1minutes + ":" + Player1seconds;
         Player2LapTimerText.text = Player2minutes + ":" + Player2seconds;
 
-
+        
      }
     private void OnTriggerExit(Collider other)
     {
@@ -62,13 +75,24 @@ public class LapManager : MonoBehaviour
             player1Lap++;
             player1LapCounter.text = player1Lap.ToString();
             ResetPlayer1Time();
-            
+            if(player1Lap >= 3)
+            {
+                WinGamePanel.SetActive(true);
+                PlayerWinningTime.text = lapTimer.ToString();
+                WinningPlayer.text = ("Player 1 Is Our Winner");
+            }
         }
         if (other.tag == "player2")
         {
             player2Lap++;
             player2LapCounter.text = player2Lap.ToString();
             ResetPlayer2Time();
+            if(player2Lap >= 3)
+            {
+                WinGamePanel.SetActive(true);
+                WinningPlayer.text = ("Player 2 Is Our Winner");
+                PlayerWinningTime.text = lapTimer.ToString();
+            }
         }
     }
 }
