@@ -1,0 +1,74 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class LapManager : MonoBehaviour
+{
+    public Text player1LapCounter;
+    public Text player2LapCounter;
+    private int player1Lap;
+    private int player2Lap;
+
+
+    public Text timerText;
+    public Text timerTextPlayer2;
+
+    public Text Player1LapTimerText;
+    public Text Player2LapTimerText;
+  
+    
+    public float lapTimer;
+    public float lapTimer2;
+
+
+
+    void Start()
+    {
+        
+        lapTimer = Time.time;
+        lapTimer2 = Time.time;
+    }
+    void ResetPlayer1Time()
+    {
+        lapTimer = Time.time;       
+    }
+    void ResetPlayer2Time()
+    {
+        lapTimer2 = Time.time;
+    }
+
+    public void Update()
+    {
+        
+        float tx = Time.time - lapTimer;
+        float txx = Time.time - lapTimer2;
+
+        string Player1minutes = ((int)tx / 60).ToString();
+        string Player1seconds = (tx % 60).ToString("f2");
+
+        string Player2minutes = ((int)txx / 60).ToString();
+        string Player2seconds = (txx % 60).ToString("f2");
+
+        Player1LapTimerText.text = Player1minutes + ":" + Player1seconds;
+        Player2LapTimerText.text = Player2minutes + ":" + Player2seconds;
+
+
+     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "player1")
+        {
+            player1Lap++;
+            player1LapCounter.text = player1Lap.ToString();
+            ResetPlayer1Time();
+            
+        }
+        if (other.tag == "player2")
+        {
+            player2Lap++;
+            player2LapCounter.text = player2Lap.ToString();
+            ResetPlayer2Time();
+        }
+    }
+}
