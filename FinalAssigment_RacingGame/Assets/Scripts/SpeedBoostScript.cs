@@ -13,6 +13,8 @@ public class SpeedBoostScript : MonoBehaviour
     public float boostDurationCar2;
     public float boostTimeCar2;
 
+    public AudioSource boostSound;
+
     // Start is called before the first frame update
 
     public void Start()
@@ -48,7 +50,7 @@ public class SpeedBoostScript : MonoBehaviour
         if (other.gameObject.tag == "player1")
         {
             boostTimeCar1 = 0;
-
+            boostSound.Play();
             player1Speed.GetComponent<VehicleMovement>().Power = 2f;
 
         }
@@ -56,7 +58,7 @@ public class SpeedBoostScript : MonoBehaviour
         if (other.gameObject.tag == "player2")
         {
             boostTimeCar2 = 0;
-
+            boostSound.Play();
             player2Speed.GetComponent<VechicleMovementPlayer2>().Power = 2f;
         }
     }
