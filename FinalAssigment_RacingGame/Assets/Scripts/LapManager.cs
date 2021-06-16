@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LapManager : MonoBehaviour
 {
     public UIscript ui;
-    List<long> lapTimes = new List<long>();
+    
 
     public Text player1LapCounter;
     public Text player2LapCounter;
@@ -14,8 +14,7 @@ public class LapManager : MonoBehaviour
     private int player2Lap;
 
 
-    public Text timerText;
-    public Text timerTextPlayer2;
+   
 
     public Text Player1LapTimerText;
     public Text Player2LapTimerText;
@@ -24,13 +23,7 @@ public class LapManager : MonoBehaviour
     public float lapTimer;
     public float lapTimer2;
 
-    public Text P1lap1;
-    public Text P1lap2;
-    public Text P1lap3;
-
-    public Text P2lap1;
-    public Text P2lap2;
-    public Text P2lap3;
+    
 
 
     public GameObject WinGamePanel;
