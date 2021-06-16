@@ -8,22 +8,11 @@ public class UIscript : MonoBehaviour
     public Text timerText;
     public Text timerTextPlayer2;
 
-    public Text lapNumber;
-    public Text lapNumber2;
-
-    public Text lap;
-    public Text lap2;
-
-   
     public float startTimer;
-    
-
-   
     
     void Start()
     {
         startTimer = Time.time;
-        
     }
 
     // Update is called once per frame
