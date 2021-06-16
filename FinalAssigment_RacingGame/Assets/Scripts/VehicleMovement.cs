@@ -6,8 +6,8 @@ public class VehicleMovement : MonoBehaviour
 {
     
 
-    private float xSpeed = 10f;
-    private float Power = 1.5f;
+    public float xSpeed = 10f;
+    public float Power = 1.5f;
     private float Friction = 0.1f;
     private bool Right = false;
     private bool left = false;

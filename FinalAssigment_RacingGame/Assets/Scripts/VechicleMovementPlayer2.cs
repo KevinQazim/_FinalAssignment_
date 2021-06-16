@@ -8,8 +8,8 @@ public class VechicleMovementPlayer2 : MonoBehaviour
     public GameObject player;
     public Vector3 spawnPosition2;
     private Vector3 direction;
-    private float xSpeed = 10f;
-    private float Power = 1.5f;
+    public float xSpeed = 10f;
+    public float Power = 1.5f;
     private float Friction = 0.1f;
     private bool Right = false;
     private bool left = false;
